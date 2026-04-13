@@ -137,17 +137,17 @@ export default function Home() {
   };
 
   return (
-    <div className="flex">
+    <div className="flex h-screen overflow-hidden">
       <Sidebar
         templates={filteredTemplates}
         selectedId={selectedTemplate?.id}
         onSelect={(t) => setSelectedTemplate(t)}
       />
 
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col overflow-hidden">
         <Topbar setSearch={setSearch} />
 
-        <div className="p-6 space-y-4">
+        <div className="p-6 space-y-4 overflow-y-auto">
           <h2 className="text-2xl font-semibold">
             {selectedTemplate?.title}
           </h2>

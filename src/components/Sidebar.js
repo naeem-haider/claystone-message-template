@@ -1,7 +1,7 @@
 
 export default function Sidebar({ templates, onSelect, selectedId }) {
   return (
-    <div className="w-64 h-screen bg-white border-r p-5">
+    <div className="w-64 h-screen sticky top-0 bg-white border-r p-5 overflow-y-auto">
       <h2 className="text-xl font-semibold mb-6">Templates</h2>
 
       <ul className="space-y-2">

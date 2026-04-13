@@ -3,7 +3,7 @@ import { Plus } from "lucide-react";
 
 export default function Topbar({ onCreate, search, setSearch }) {
   return (
-    <div className="w-full h-16 bg-white border-b flex items-center justify-between px-6 gap-4">
+    <div className="w-full h-16 bg-white border-b flex items-center justify-between px-6 sticky top-0 z-40">
       
       <input
         type="text"
