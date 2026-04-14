@@ -5,7 +5,7 @@ import { Menu } from "lucide-react";
 
 export default function Topbar({ onCreate, search, setSearch, toggleSidebar }) {
     return (
-        <div className="w-full h-16 bg-white border-b flex items-center justify-between px-6 sticky top-0 z-40">
+        <div className="w-full h-16 bg-white border-b flex items-center justify-between px-7 sticky top-0 z-40 py-2">
 
             <div className="flex items-center gap-3">
 
@@ -21,7 +21,7 @@ export default function Topbar({ onCreate, search, setSearch, toggleSidebar }) {
                     type="text"
                     placeholder="Search templates..."
                     onChange={(e) => setSearch(e.target.value)}
-                    className="border px-3 py-2 rounded-lg w-40 md:w-64"
+                    className="border px-3 py-2 rounded-lg w-40 md:w-74"
                 />
             </div>
 
@@ -29,9 +29,9 @@ export default function Topbar({ onCreate, search, setSearch, toggleSidebar }) {
 
             <button
                 onClick={onCreate}
-                className="bg-black text-white px-4 mx-4 py-2 rounded-lg text-sm"
+                className="bg-black text-white px-3 py-2 rounded-lg text-sm border"
             >
-                + New Template
+                + Template
             </button>
         </div>
     );
