@@ -18,6 +18,8 @@ export default function Home() {
   const [copiedId, setCopiedId] = useState(null);
   const [toast, setToast] = useState("");
 
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   const [variables, setVariables] = useState({});
   const [senderName, setSenderName] = useState("");
 
@@ -56,8 +58,8 @@ export default function Home() {
   }, [selectedTemplate]);
 
   useEffect(() => {
-  document.body.style.overflow = isModalOpen ? "hidden" : "auto";
-}, [isModalOpen]);
+    document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+  }, [isModalOpen]);
 
   // // 💾 LocalStorage
   // useEffect(() => {
@@ -94,22 +96,22 @@ export default function Home() {
   };
 
   // 📋 Copy
- const handleCopy = (msg) => {
-  const text =
-    editingId === msg.id ? tempText : msg.content;
+  const handleCopy = (msg) => {
+    const text =
+      editingId === msg.id ? tempText : msg.content;
 
-  navigator.clipboard.writeText(generateMessage(text));
+    navigator.clipboard.writeText(generateMessage(text));
 
-  setCopiedId(msg.id);
-  setTimeout(() => setCopiedId(null), 1500);
-};
+    setCopiedId(msg.id);
+    setTimeout(() => setCopiedId(null), 1500);
+  };
 
   // ✏️ Edit
- const handleEdit = (msg) => {
-  setEditingId(msg.id);
-  setTempText(msg.content);
-  setIsModalOpen(true);
-};
+  const handleEdit = (msg) => {
+    setEditingId(msg.id);
+    setTempText(msg.content);
+    setIsModalOpen(true);
+  };
 
   // 💾 Save
   const handleSave = (msgId) => {
@@ -139,13 +141,18 @@ export default function Home() {
   return (
     <div className="flex h-screen overflow-hidden">
       <Sidebar
-        templates={filteredTemplates}
-        selectedId={selectedTemplate?.id}
-        onSelect={(t) => setSelectedTemplate(t)}
-      />
+  templates={filteredTemplates}
+  selectedId={selectedTemplate?.id}
+  onSelect={(t) => setSelectedTemplate(t)}
+  isOpen={isSidebarOpen}
+  onClose={() => setIsSidebarOpen(false)}
+/>
 
       <div className="flex-1 flex flex-col overflow-hidden">
-        <Topbar setSearch={setSearch} />
+        <Topbar
+          setSearch={setSearch}
+          toggleSidebar={() => setIsSidebarOpen(true)}
+        />
 
         <div className="p-6 space-y-4 overflow-y-auto">
           <h2 className="text-2xl font-semibold">
@@ -248,51 +255,51 @@ export default function Home() {
 
 
       {isModalOpen && (
-  <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
-    
-    <div className="bg-white w-full max-w-3xl rounded-2xl shadow-xl p-6 space-y-4 animate-fade-in">
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
 
-      {/* Header */}
-      <div className="flex justify-between items-center">
-        <h2 className="text-lg font-semibold">Edit Message</h2>
-        <button onClick={() => setIsModalOpen(false)}>✕</button>
-      </div>
+          <div className="bg-white w-full max-w-3xl rounded-2xl shadow-xl p-6 space-y-4 animate-fade-in">
 
-      {/* Textarea */}
-      <textarea
-        value={tempText}
-        onChange={(e) => setTempText(e.target.value)}
-        className="w-full h-[80vh] p-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-black/10"
-      />
+            {/* Header */}
+            <div className="flex justify-between items-center">
+              <h2 className="text-lg font-semibold">Edit Message</h2>
+              <button onClick={() => setIsModalOpen(false)}>✕</button>
+            </div>
 
-      {/* Footer Buttons */}
-      <div className="flex justify-end gap-3">
+            {/* Textarea */}
+            <textarea
+              value={tempText}
+              onChange={(e) => setTempText(e.target.value)}
+              className="w-full h-[80vh] p-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-black/10"
+            />
 
-        <button
-          onClick={() => {
-            navigator.clipboard.writeText(generateMessage(tempText));
-            setToast("Copied");
-            setTimeout(() => setToast(""), 1500);
-          }}
-          className="px-4 py-2 border rounded-lg hover:bg-gray-100"
-        >
-          Copy
-        </button>
+            {/* Footer Buttons */}
+            <div className="flex justify-end gap-3">
 
-        <button
-          onClick={() => {
-            handleSave(editingId);
-            setIsModalOpen(false);
-          }}
-          className="px-4 py-2 bg-black text-white rounded-lg"
-        >
-          Save
-        </button>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(generateMessage(tempText));
+                  setToast("Copied");
+                  setTimeout(() => setToast(""), 1500);
+                }}
+                className="px-4 py-2 border rounded-lg hover:bg-gray-100"
+              >
+                Copy
+              </button>
 
-      </div>
-    </div>
-  </div>
-)}
+              <button
+                onClick={() => {
+                  handleSave(editingId);
+                  setIsModalOpen(false);
+                }}
+                className="px-4 py-2 bg-black text-white rounded-lg"
+              >
+                Save
+              </button>
+
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
