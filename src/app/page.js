@@ -12,6 +12,8 @@ import { generateMessage } from "@/utils/messageUtils";
 export default function Home() {
   const app = useMessageApp();
 
+  
+
   return (
     <div className="flex h-screen overflow-hidden">
 

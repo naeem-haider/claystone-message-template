@@ -1,0 +1,57 @@
+[
+  {
+    "user_id": 1,
+    "title": "Update Messages",
+    "category": "Update",
+    "messages": [
+      {
+        "id": 1,
+        "content": "Hello {{name}},\n\nI hope you're doing well.\n\nI’m pleased to inform you that I’ve completed the following updates to the project:\n\n- I've successfully saved the JDM Auto Glass theme and applied it to the new Shopify store.\n\n- All the text from the JDM Auto Glass website has been copied and pasted into the new store.\n\n- I've created menu items in the website navbar.\n\n- I've replaced the \"JDM Auto Glass\" brand name with \"CruiserWorx\" throughout the site.\n\n- I've made this fully responsive your website for better viewing all device mobile and desktop.\n\n- I've used the 'Land Cruiser car image' throughout the entire website, as you suggested. It now looks even more beautiful and professional.\n\nYou can re-view your live store here:\nWebsite URL: {{url}}\n\nPlease take a moment to check everything, and feel free to let me know if you’d like any further adjustments or improvements. \n\nI’ll be happy to assist you.\n\nNote: I have not received any product images or details yet, so I couldn't add any products to your website. Please provide the product details in a CSV format as soon as possible so that the final stage of the project can be completed quickly.\n\nI look forward to your feedback. Thank you.\n\nBest Regards,"
+      }
+    ]
+  },
+  {
+    "user_id": 2,
+    "title": "Full Update Message",
+    "category": "Update",
+    "messages": [
+      {
+        "id": 1,
+        "content": "Hello {{name}},\n\nI hope you are doing well.\n\nI'm pleased to inform you that I’ve successfully completed the following updates to the project:\n\nI've completed the following tasks for your project:\n\n01. I've designed a fully functional Shopify website.\n\n02. Created the following pages on the website:\n\n- Home\n- Services\n- Service details page\n- About us\n- FAQ\n- Gallery\n- Gallery image details page\n- Contact us\n\n05. I've added the necessary apps:\n\n-Live chatting\n\n06. Created the following policy page in the store:\n\n- Privacy Policy \n- Refund Policy\n- Terms of Service\n- Contact Information\n\nBelow is what else I did in this project:\n\n-I've added images and text content on the website.\n\n- I’ve added your logo.\n\n- I've added your contact details.\n\n- I've added Gallery popup.\n\n- All pages are fully optimized for mobile devices, ensuring a smooth and responsive experience.\n\nYou can re-view your live website here: \nWebsite URL: {{url}}\n\nPlease explore the site and let me know if you need any further adjustments.\n\nI will be happy to help you and make corrections based on your feedback.\n\nNote: I have completed all the work.Once everything is confirmed, I will proceed to the final stage., please let me know if you require any additional adjustments.\n\nNo worries. After delivery, you will also get 30 days of free support.\n\nI look forward to your feedback. Thank you.\n\nBest Regards,"
+      }
+    ]
+  },
+  {
+    "user_id": 3,
+    "title": "Delivery Message",
+    "category": "Delivery",
+    "messages": [
+      {
+        "id": 1,
+        "content": "Hello {{name}},\n\nI hope you are doing well.\n\nI'm pleased to inform you that I’ve successfully completed all tasks for the project as per your instructions:\n\nI've completed the following tasks for your project:\n\n01. I've designed a fully functional Shopify website.\n\n02. Created the following pages on the website:\n\n- Home\n- Shop\n- About Us\n- Contact\n\n03. I've added the necessary apps:\n\n- Appstle℠ Bundles & Upsells\n\n- Appstle℠ Subscriptions App\n\n- Appstle℠ Loyalty\n\n- Translate & Adapt\n\n04. Created the following policy page in the store:\n\n- Privacy Policy \n- Shipping Policy\n- Refund Policy\n- Terms of Service\n\n05. Below is what else I did in this project:\n\n-I've added images and text content on the website.\n\n- I've added your logo.\n\n- I've created one time purchase and monthly Subscription functionality.\n\n- I've created a popup to the store.\n\n- I've created product bundle to the store.\n\n- I've implement Add 1 extra pack and get a MAISON AYANA bottle for free.\n\n- I've implemented multiple packs can add without clicking to the product page.\n\n- I've added \"Add quantity selector\" (+ / –) directly on product listing (Amazon-style: Add to cart first).\n\n- I've implemented \"Up sell and Cross sell\" functionality after purchase the product.\n\n- I've implemented rewards funtionality or loyalty to the store.\n\n- I've added all testimonial card text to the store.\n\n- I've improved over all sales logic\n\n- I've added a strong incentive offer.\n\n- All pages are fully optimized for mobile devices, ensuring a smooth and responsive experience.\n\nYou can re-view your live website here:\nWebsite URL: {{url}}\n\nPlease explore the site and let me know if you need any further adjustments.\n\nI will be happy to help you and make corrections based on your feedback.\n\nNote: I wanted to let you know that I've completed all the work as per your requirements. Please accept the delivery. However, the revisions you requested are causing the project timeline delays on my profile, which is negatively impacting my reputation.\n\nOnce you confirm that everything is in order, I will proceed to the final stage.\n\nIf any changes or fixes are required, you can send the message in the Fiverr inbox, and I will make changes to your website as per all your requirements. \n\nNo worries. After delivery, you will also get 30 days of free support.\n\nIf there are any further changes needed, please share them through the Fiverr inbox. I will take care of everything promptly.\n\nI hope you understand.\n\nNo worries. After delivery, you will also get 30 days of free support. Thank you.\n\nBest Regards,"
+      }
+    ]
+  },
+  {
+    "user_id": 4,
+    "title": "After Delivery Inbox",
+    "category": "Delivery",
+    "messages": [
+      {
+        "id": 1,
+        "content": "Hello {{name}},\n\nI hope you are doing well.\n\nI am happy to inform you that I have successfully completed all the tasks discussed for your project. \n\nWebsite URL: {{url}}\nPass: rtiegh\n\nPlease explore the site and let me know if you need any further adjustments.\n\nI will be happy to help you and make corrections based on your feedback.\n\nNote: I have completed all the work. I am delivering it to you, don't worry. Please accept the delivery. If you require any further changes or adjustments, we will be happy to provide them at any time.\n\nIf you have any changes, questions, or require any clarification, please feel free to share them with me via the Fiverr inbox. I would be more than happy to assist you.\n\nPlease feel free to accept the delivery and share your experience with the Fiverr community. Thank you.\n\nBest Regards,"
+      }
+    ]
+  },
+  {
+    "user_id": 5,
+    "title": "Revision Request",
+    "category": "Revision",
+    "messages": [
+      {
+        "id": 1,
+        "content": "Hello {{name}},\n\nI hope you are doing well.\n\nYou mentioned changing the background color. Please let me know your preferred color instead of white.\n\nKindly purchase a domain according to your store name and share the details with me via Fiverr inbox. I will connect it for you, no need to worry.\n\nAll work has been completed and delivered on time. However, the order is still in revision and showing as late, which is affecting my profile. I kindly request that you please accept the delivery and share your experience with the Fiverr community.\n\nOnce I receive the domain details and preferred color, I will quickly complete the final updates. You will also receive 30 days of free support after delivery.\n\nI hope you understand the situation and consider my request positively.\n\nThank you for your support.\n\nBest Regards,"
+      }
+    ]
+  }
+]

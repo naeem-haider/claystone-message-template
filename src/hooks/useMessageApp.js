@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import templatesData from "@/data/templates";
+// import templatesData from "@/data/templates";
 import { extractVariables } from "@/utils/messageUtils";
+import { supabase } from "@/lib/supabase";
 
 export const useMessageApp = () => {
-  const [templatesList, setTemplatesList] = useState(templatesData);
-  const [selectedTemplate, setSelectedTemplate] = useState(templatesData[0]);
+//   const [templatesList, setTemplatesList] = useState(templatesData);
+//   const [selectedTemplate, setSelectedTemplate] = useState(templatesData[0]);
   const [search, setSearch] = useState("");
 
   const [editingId, setEditingId] = useState(null);
@@ -19,6 +20,12 @@ export const useMessageApp = () => {
   const [variables, setVariables] = useState({});
   const [senderName, setSenderName] = useState("");
 
+//   const { user, isLoaded } = useUser();
+
+const [templatesList, setTemplatesList] = useState([]);
+const [selectedTemplate, setSelectedTemplate] = useState(null);
+
+
   const placeholders = {
     name: "Enter Client Name",
     url: "Enter Website URL",
@@ -32,6 +39,27 @@ export const useMessageApp = () => {
   const filteredTemplates = templatesList.filter((t) =>
     t.title.toLowerCase().includes(search.toLowerCase())
   );
+
+
+
+  useEffect(() => {
+  const fetchTemplates = async () => {
+    const { data, error, status } = await supabase
+      .from("templates")
+      .select("*");
+
+    console.log("STATUS:", status);
+    console.log("DATA:", data);
+    console.log("ERROR:", error);
+
+    if (data) {
+      setTemplatesList(data);
+      setSelectedTemplate(data[0] || null);
+    }
+  };
+
+  fetchTemplates();
+}, []);
 
   useEffect(() => {
     if (!selectedTemplate) return;
