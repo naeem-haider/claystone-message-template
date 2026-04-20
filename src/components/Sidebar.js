@@ -1,3 +1,5 @@
+import { Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export default function Sidebar({ templates, onSelect, selectedId, isOpen, onClose }) {
     return (
@@ -40,14 +42,20 @@ export default function Sidebar({ templates, onSelect, selectedId, isOpen, onClo
                                     onClose();
                                 }}
                                 className={`p-2 rounded-lg cursor-pointer ${selectedId === item.id
-                                        ? "bg-gray-200"
-                                        : "hover:bg-gray-100"
+                                    ? "bg-gray-200"
+                                    : "hover:bg-gray-100"
                                     }`}
                             >
                                 <p className="font-medium">{item.title}</p>
                                 <p className="text-xs text-gray-500">{item.category}</p>
                             </li>
                         ))}
+                        <Link href="/generate">
+                            <li className="flex items-center gap-2 p-2 px-4 rounded-lg cursor-pointer bg-black text-white hover:bg-zinc-800 transition-colors group">
+                                <Sparkles size={18} className="text-blue-400 group-hover:animate-pulse" />
+                                <p className="font-medium">Generate Message</p>
+                            </li>
+                        </Link>
                     </ul>
                 </div>
             </div>
