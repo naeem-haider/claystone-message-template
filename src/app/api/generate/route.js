@@ -215,6 +215,8 @@ Rules:
 3. The translation field must contain a natural Bangla translation of the same message.
 4. Do not include markdown fences, commentary, or extra text outside the JSON object.
 5. Use the provided client name, sender name, and website URL as shown.
+6. Always follow the structure and style of the selected template, adapting the content based on the provided tasks, pages, policies, apps, and notes.  
+7. Write the message in active voice, using clear and concise language. Avoid passive constructions and ensure the message is engaging and easy to understand.  
 
 Template: ${data.template}
 ${lines.join("\n")}
@@ -246,7 +248,7 @@ export async function POST(req) {
     const prompt = buildPrompt(data);
 
     const result = await ai.models.generateContent({
-      model: "gemini-2.5-flash-lite",
+      model: "gemini-3.1-flash-lite-preview",
       contents: prompt,
     });
 
